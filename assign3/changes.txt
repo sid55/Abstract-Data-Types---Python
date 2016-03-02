@@ -1,0 +1,30 @@
+changes.txt
+
+For this lab I had to replace the array based priority queue with a more efficient heap based priority queue. 
+The array based priority queue was using a brute-force O(n^2) method that would linearly search the array for 
+the next collision event. I had to change the code so that it uses a min heap to find the next collision event 
+which would take O(log n).  
+
+The first change I made is to the init method which now makes an empty array pq and sets the index to 0. 
+The array pq will take in a tuple which will contain a value and another tuple key. Like the original code 
+this method returns nothing.
+
+Moving on to the insert method I changed the code so that the insert acts more like a push function. Since the 
+insert method pushes a tuple into the array pq I had to define what the tuple will be. I set a 
+tuple called key to contain i, j, num_collisions_i, num_collisions_j. Then I set another tuple called combined 
+to contain the value and key. Then, using the append function, I was able to add combined into the array pq and add the 
+index by 1.
+
+My delete function acts like a pop. In the delete function I call the function ExtractMin which is a function 
+I created. This Extract method sees if the index is less than 1. If it is less than 1 it returns nothing. If 
+it is not less than 1 it will set min to be the first tuple in the array pq and then puts the last element 
+into the first index. Afterwards, it calls the function Minheapify.
+
+The get_next method originally had a T(n) equation of n^2 + 2n. This then gets simplified to O(n^2). This was 
+the point where I realized that this is taking too long and in order to shorten the time I had to use Build 
+Min Heapify which will return the shortest collision time and hence reduce the total time complexity down to 
+O(log n). I have called Build Min Heapify once onto an array of tuples comparing each of the times in each 
+tuple to figure out which tuple contained the shortest time. This process took log(n). Inside this method I
+also had temporary variables that contained all of the information of the tuple with the shortest time. 
+Afterwards, I returned all of this information in one return statement and then called delete to put in a new 
+shortest time onto the first index of the first tuple in the array. 

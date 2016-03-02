@@ -1,0 +1,21 @@
+observations.txt
+
+For this lab, I had to compare a physics simulation using an Array Priority Queue and a Heap Priority Queue. 
+If I run both queues with 20 balls it can be observed that both the simulations run smoothly with no lag. As  
+the number of balls increases to say 50 balls, the simulation with the Array Priority Queue 
+takes a little while to start and there is a little lag. In comparison, the simulation with the Heap Priority Queue 
+does not take time to start up. For 100 balls, the simulation with Heap Priority Queue starts 
+to get a little lag but there is no starting delay. However the simulation with Array Priority Queue 
+has a longer starting delay and there is more lag. At 200 balls I observed that in the simulation with Array 
+Priority Queue there is a long start time and the balls freeze on the screen and then move again. For the 
+simulation with Heap Priority Queue there is still no starting delay however there is a little lag. 
+	
+As number of balls increases I find that the simulation using the Heap Priority Queue is more 
+beneficial than the simulation with the Array Priority Queue. This is because the Array Priority Queue runs 
+O (n^2) while the Heap Priority Queue runs O (log n). There is a starting delay for the Array Priority Queue 
+which gets longer as the number of balls increase and the same can be seen with the lag time.  
+For the Heap Priority Queue there is no starting delay and there is little lag even with 200 balls. 
+
+Thus, the main advantage of using a Heap Priority Queue is that the simulation now has a smaller amount of 
+starting delay and as the number of balls increases there is little to no lag. This means that the balls 
+move more naturally at O (log n) and it is not taking O (n^2). This logic is further explained above.

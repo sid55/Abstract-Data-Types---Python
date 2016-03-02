@@ -1,0 +1,35 @@
+Comments.txt
+
+Comparing the best and worst case plots for insertion sort, I have 
+observed several things. The best case input for insertion sort seems 
+to going in a linear fashion while the worst case seems to be quadratic. 
+This makes sense because in insertion sort, at the best case, there 
+would be n comparisons and no swaps. This happens when the array
+is already in sorted order and each element just compares itself to the 
+following element making the time it takes for the best case to be linear.
+The worst case, being quadratic makes sense as well. This happens when
+the array is backwards since after each comparison, a swap needs to be
+done. 
+
+For mergesort, the best case and worst case seem to both have a linear
+growth. This is alright because for huge values of n, mergesort will 
+eventually become linear instead of its big O time of O(n(log(n)). No 
+matter the type of array being entered into mergesort, the time it takes
+to sort almost any type of array is O(n(log(n)). This is because there
+will always be log(n) levels meaning log(n) mergesorts and n comparisons.
+This, thus makes the time algorithm what it is. 
+
+The average case of insertion sort seems to be a little slower than the
+best case and a little faster than the worst case. This makes sense because
+in order for the average case to be either exactly linear or exactly quadratic,
+the array being inputted has to either always be in order or always be
+in reverse order. However, when inputting random arrays, the chances of this
+happening for every single array from size 1 to 1000, is incredibly close 
+to zero. Thus, the reasoning as to why this line is in the correct place,
+is explained. 
+
+The average case of merge sort seems to look really similar to both the worst 
+case and the best case. As I have mentioned my reasoning above, the logic
+behind why this is so, makes sense. No matter the type of array that is being
+entered into merge sort, the plot of the time versus elements will all look
+approximately alike.
